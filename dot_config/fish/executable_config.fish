@@ -1,0 +1,33 @@
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /home/brandon/miniconda3/bin/conda
+    eval /home/brandon/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+else
+    if test -f "/home/brandon/miniconda3/etc/fish/conf.d/conda.fish"
+        . "/home/brandon/miniconda3/etc/fish/conf.d/conda.fish"
+    else
+        set -x PATH "/home/brandon/miniconda3/bin" $PATH
+    end
+end
+# <<< conda initialize <<<
+
+function starship_precmd --on-event fish_prompt
+    set loc $PWD
+    # Send OSC sequence to Starship
+    printf "\033]9;12\007"
+    if test -n "$loc"
+        printf "\033]9;9;\"%s\"\007" "$loc"
+    end
+end
+
+function fish_greeting
+    fortune | pokesay
+end
+
+function starship_transient_prompt_func
+  starship module character
+end
+
+starship init fish | source
+enable_transience
