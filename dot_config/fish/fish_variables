@@ -1,0 +1,5 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR __fish_initialized:4300
+SETUVAR fish_greeting:\U0001f41f
+SETUVAR fish_user_paths:/home/brandon/bin\x1e/home/brandon/\x2elocal/bin\x1e/home/brandon/\x2ecargo/bin
