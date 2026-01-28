@@ -1,7 +1,20 @@
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
-vim.keymap.set('n', '<C-p>', builtin.git_files, {})
-vim.keymap.set('n', '<leader>ps', function()
+local function project_files()
+	local git_dir = vim.fs.find('.git', { path = vim.loop.cwd(), upward = true })[1]
+	if git_dir then
+		builtin.git_files()
+	else
+		builtin.find_files()
+	end
+end
+
+
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<C-p>', project_files, {})
+vim.keymap.set('n', '<leader>fp', project_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fs', function()
 	builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
 
@@ -20,4 +33,4 @@ end)
 -- }
 -- -- To get fzf loaded and working with telescope, you need to call
 -- -- load_extension, somewhere after setup function:
--- require('telescope').load_extension('fzf')
+require('telescope').load_extension('fzf')
