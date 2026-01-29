@@ -12,6 +12,7 @@ else
 end
 # <<< conda initialize <<<
 
+{{- if ne .chezmoi.hostname "evarice-nuc" }}
 function starship_precmd --on-event fish_prompt
     set loc $PWD
     # Send OSC sequence to Starship
@@ -20,6 +21,7 @@ function starship_precmd --on-event fish_prompt
         printf "\033]9;9;\"%s\"\007" "$loc"
     end
 end
+{{- end }}
 
 function fish_greeting
     fortune | pokesay
