@@ -18,6 +18,8 @@ Plug('nvim-telescope/telescope-fzf-native.nvim', { ['do'] = 'make' })
 Plug('nvim-telescope/telescope.nvim')
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 Plug('preservim/nerdtree', { ['on'] = 'NERDTreeToggle' })
+Plug("rebelot/kanagawa.nvim")
+Plug("folke/tokyonight.nvim")
 vim.call('plug#end')
 
 -- Auto-install plugins on first run

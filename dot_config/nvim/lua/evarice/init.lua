@@ -1,5 +1,5 @@
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 -- Show absolute line numbers
 vim.wo.number = true
 
@@ -13,3 +13,5 @@ vim.lsp.enable('clangd')
 
 require("evarice.plugins")
 require("evarice.keymap")
+
+vim.cmd.colorscheme("kanagawa-wave")
