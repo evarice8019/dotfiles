@@ -13,10 +13,19 @@ vim.api.nvim_create_autocmd("FileType", {
     callback = function() vim.treesitter.start() end,
 })
 
+-- Format on save for Rust and C/C++
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = { "*.rs", "*.c", "*.cpp", "*.h", "*.hpp" },
+    callback = function()
+        vim.lsp.buf.format({ async = false })
+    end,
+})
+
 require("evarice.plugins")
 require("evarice.keymap")
 
 vim.lsp.enable('clangd')
+vim.lsp.enable('rust_analyzer')
 
 vim.cmd.colorscheme("kanagawa-wave")
 
