@@ -2,13 +2,15 @@
 
 # List of tools to install
 crates=(
-    "bat"
+    #"bat"
     "bottom"
     "du-dust"
-    "eza"
-    "fd-find"
+    #"eza"
+    #"fd-find"
     "git-delta"
-    "ripgrep"
+    #"ripgrep"
+    #"hyperfine"
+    "tokei"
     "tree-sitter-cli"
 )
 
