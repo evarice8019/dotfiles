@@ -21,7 +21,7 @@ Plug('preservim/nerdtree', { ['on'] = 'NERDTreeToggle' })
 Plug('rebelot/kanagawa.nvim')
 Plug('folke/tokyonight.nvim')
 Plug('mrcjkb/rustaceanvim')
-Plug('saghen/blink.cmp', { ['do'] = 'cargo build --release' })
+Plug('saghen/blink.cmp', { ['tag'] = 'v1.8.0' })
 vim.call('plug#end')
 
 -- Auto-install plugins on first run
