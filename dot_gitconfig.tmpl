@@ -1,0 +1,15 @@
+[user]
+{{- if eq .email "azard1307@gmail.com" }}
+	email = 35512190+evarice8019@users.noreply.github.com
+{{- else }}
+    email = .email
+{{- end  }}
+	name = Brandon Lam
+[core]
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+[merge]
+	conflictStyle = zdiff3
