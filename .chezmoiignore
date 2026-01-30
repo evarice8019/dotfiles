@@ -1,2 +1,14 @@
 setup_scripts/**
 
+{{- if eq .chezmoi.os "windows" }}
+.config/*
+!.config/starship.toml
+
+Documents/*
+!Documents/*PowerShell/
+
+.local/*
+.tmux.conf
+
+{{- end }}
+
