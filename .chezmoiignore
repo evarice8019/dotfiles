@@ -1,10 +1,13 @@
 setup_scripts/**
 
+{{- if ne .chezmoi.os "windows" }}
+Documents/*PowerShell/
+{{- end }}
+
 {{- if eq .chezmoi.os "windows" }}
 .config/*
 !.config/starship.toml
 
-Documents/*
 !Documents/*PowerShell/
 
 .local/*
