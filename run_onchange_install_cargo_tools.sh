@@ -10,6 +10,6 @@ crates=(
 )
 
 for crate in "${crates[@]}"; do
-    cargo install "$crate"
+    cargo install "$crate" --locked
 done
 

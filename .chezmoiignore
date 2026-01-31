@@ -5,7 +5,9 @@ setup_scripts/**
 !.config/starship.toml
 .local/*
 .tmux.conf
+*.sh
 {{- else }}
 Documents
+*.ps1
 {{- end }}
 
