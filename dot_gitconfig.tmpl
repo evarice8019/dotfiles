@@ -5,6 +5,15 @@
 	email = {{ .email }}
 {{- end  }}
 	name = Brandon Lam
+[push]
+	autoSetupRemote = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[alias]
+	lg2 = "!f() { git log --oneline --graph --decorate $1 $2 `git merge-base $1 $2`^! ;}; f"
 [core]
 	pager = delta
 [interactive]
