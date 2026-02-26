@@ -1,4 +1,5 @@
 setup_scripts/**
+backup/**
 
 {{- if eq .chezmoi.os "windows" }}
 .config/*
