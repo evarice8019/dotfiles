@@ -1,0 +1,39 @@
+[terminal.shell]
+program = "wsl"
+args = ["-d", "Ubuntu-24.04-main", "--cd", "~"]
+
+[general]
+import = [
+	# "C:\\Users\\BrandonLam\\AppData\\Roaming\\alacritty\\themes\\themes\\kanagawa_wave.toml"
+]
+
+[scrolling]
+history = 100000
+
+[font.normal]
+family = "Cascadia Code NF"
+style = "Regular"
+
+[font.bold]
+family = "Cascadia Code NF"
+style = "Bold"
+
+[font.italic]
+family = "Cascadia Code NF"
+style = "Italic"
+
+[font.bold_italic]
+family = "Cascadia Code NF"
+style = "Bold Italic"
+
+[mouse]
+bindings = [
+	{ mouse = "Left", mods = "Control", action = "Copy" },
+	{ mouse = "Right", mods = "Control", action = "Paste" },
+]
+
+[keyboard]
+bindings = [
+	{ key = "T", mods = "Control|Shift" , action = "CreateNewWindow" },
+	{ key = "N", mods = "Control|Shift" , action = "SpawnNewInstance" },
+]
