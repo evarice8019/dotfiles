@@ -1,5 +1,6 @@
 [data]
 email = {{ promptStringOnce . "email" "Email address" | quote }}
+profile = {{ promptChoiceOnce . "profile" "Profile?" (list "personal" "work") | quote }}
 
 [diff]
 exclude = ["scripts"]
