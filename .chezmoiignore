@@ -12,3 +12,4 @@ Documents
 *.ps1
 {{- end }}
 
+README.md
