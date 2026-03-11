@@ -9,6 +9,10 @@ if test -f $_cachyos_cfg
         fortune | pokesay
     end
 else
+    source ~/.config/fish/my-config.fish
+
+    {{- if eq .chezmoi.os "linux" }}
+    {{- if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
     # WSL / standalone: full setup
     function starship_precmd --on-event fish_prompt
         printf "\033]9;12\007"
@@ -16,6 +20,8 @@ else
             printf "\033]9;9;\"%s\"\007" "$PWD"
         end
     end
+    {{- end }}
+    {{- end }}
 
     function starship_transient_prompt_func
         starship module character
@@ -27,6 +33,4 @@ else
     function fish_greeting
         fortune | pokesay
     end
-
-    source ~/.config/fish/my-config.fish
 end
