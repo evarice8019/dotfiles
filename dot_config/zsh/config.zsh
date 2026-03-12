@@ -28,7 +28,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Ignore commands that start with spaces and duplicates.
 
-export HISTCONTROL=ignoreboth
+# export HISTCONTROL=ignoreboth
+setopt HIST_IGNORE_SPACE
+setopt HIST_IGNORE_DUPS
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -48,7 +50,8 @@ export LESS_TERMCAP_me="$(tput sgr0 2> /dev/null)"
 # Make new shells get the history lines from all previous
 # shells instead of the default "last window closed" history.
 
-export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+# export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+setopt INC_APPEND_HISTORY
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
