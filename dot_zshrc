@@ -1,2 +1,4 @@
 # source /usr/share/cachyos-zsh-config/cachyos-config.zsh
 source $HOME/.config/zsh/config.zsh
+
+fortune | pokesay -c small
