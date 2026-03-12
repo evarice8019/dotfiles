@@ -6,30 +6,30 @@ alias make="make -j`nproc`"
 alias ninja="ninja -j`nproc`"
 alias n="ninja"
 alias c="clear"
-# --- ARCH LINUX SPECIFIC ---
+{{ if eq .chezmoi.osRelease.id "cachyos" -}}
 alias rmpkg="sudo pacman -Rsn"
 alias cleanch="sudo pacman -Scc"
 alias fixpacman="sudo rm /var/lib/pacman/db.lck"
 alias update="sudo pacman -Syu"
-# --- END ARCH LINUX SPECIFIC ---
+{{- end }}
 
 # Help people new to Arch
-# --- ARCH LINUX SPECIFIC ---
+{{ if eq .chezmoi.osRelease.id "cachyos" -}}
 alias apt="man pacman"
 alias apt-get="man pacman"
-# --- END ARCH LINUX SPECIFIC ---
+{{ end -}}
 alias please="sudo"
 alias tb="nc termbin.com 9999"
 
 # Cleanup orphaned packages
-# --- ARCH LINUX SPECIFIC ---
+{{ if eq .chezmoi.osRelease.id "cachyos" -}}
 alias cleanup="sudo pacman -Rsn $(pacman -Qtdq)"
-# --- END ARCH LINUX SPECIFIC ---
+{{ end -}}
 
 # Get the error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
 
 # Recent installed packages
-# --- ARCH LINUX SPECIFIC ---
+{{ if eq .chezmoi.osRelease.id "cachyos" -}}
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
-# --- END ARCH LINUX SPECIFIC ---
+{{ end -}}

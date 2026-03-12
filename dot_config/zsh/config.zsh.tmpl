@@ -1,7 +1,9 @@
 # Path to your oh-my-zsh installation.
-# --- DISTRO SPECIFIC: OH-MY-ZSH PATH ---
+{{ if eq .chezmoi.osRelease.id "cachyos" -}}
 export ZSH="/usr/share/oh-my-zsh"
-# --- END DISTRO SPECIFIC ---
+{{ else if eq .chezmoi.osRelease.id "ubuntu" -}}
+export ZSH="$HOME/.oh-my-zsh"
+{{ end -}}
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 DISABLE_MAGIC_FUNCTIONS="true"

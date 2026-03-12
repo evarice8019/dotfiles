@@ -1,5 +1,6 @@
-# --- DISTRO SPECIFIC: PLUGIN & THEME PATHS ---
+{{ if eq .chezmoi.osRelease.id "cachyos" -}}
 # source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
 
 # Fish-like syntax highlighting and autosuggestions
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -10,8 +11,13 @@ source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring
 
 # pkgfile "command not found" handler
 source /usr/share/doc/pkgfile/command-not-found.zsh
-# --- END DISTRO SPECIFIC ---
 
-# --- DISTRO SPECIFIC: FZF PATH ---
 export FZF_BASE=/usr/share/fzf
-# --- END DISTRO SPECIFIC ---
+{{ else if eq .chezmoi.osRelease.id "ubuntu" -}}
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+source $HOME/.config/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+export FZF_BASE=/usr/bin
+{{ end -}}
