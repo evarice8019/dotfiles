@@ -3,11 +3,6 @@ set _cachyos_cfg /usr/share/cachyos-fish-config/cachyos-config.fish
 if test -f $_cachyos_cfg
     # CachyOS: let the distro config handle starship, aliases, etc.
     source $_cachyos_cfg
-
-    # Override greeting last so it wins
-    function fish_greeting
-        fortune | pokesay
-    end
 else
     source ~/.config/fish/my-config.fish
 
@@ -30,7 +25,9 @@ else
     starship init fish | source
     enable_transience
 
-    function fish_greeting
-        fortune | pokesay -c small
-    end
+    zoxide init fish | source
+end
+
+function fish_greeting
+    fortune | pokesay -c small
 end
