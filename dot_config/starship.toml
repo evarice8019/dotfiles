@@ -10,6 +10,7 @@ $git_status\
 $cmd_duration\
 $line_break\
 $python\
+$conda\
 $character"""
 
 [directory]
@@ -49,3 +50,9 @@ format = "[$virtualenv]($style) "
 style = "bright-black"
 detect_extensions = []
 detect_files = []
+
+[conda]
+disabled = false
+ignore_base = true
+format = "[$symbol$environment]($style) "
+symbol = ""
