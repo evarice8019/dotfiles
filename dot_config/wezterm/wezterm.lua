@@ -3,6 +3,7 @@ local act = wezterm.action
 local config = wezterm.config_builder()
 
 -- config.color_scheme = "Catppuccin Mocha" -- or macchiato, frappe, latte
+config.color_scheme = "Tokyo Night" -- or macchiato, frappe, latte
 
 config.keys = {
 	-- Vertical split (side-by-side)
@@ -41,6 +42,9 @@ table.insert(config.keys, {
 	action = act.ActivateTab(-1),
 })
 
-config.font = wezterm.font("JetBrainsMonoNL Nerd Font")
+config.font = wezterm.font_with_fallback({
+	"JetBrainsMonoNL Nerd Font",
+	"Adwaita Mono",
+})
 
 return config

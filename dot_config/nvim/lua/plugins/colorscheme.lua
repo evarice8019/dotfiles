@@ -38,7 +38,7 @@ return {
         treesitter_context = true,
         which_key = true,
       },
-      transparent_background = true,
+      -- transparent_background = true,
     },
   },
   {
@@ -46,7 +46,7 @@ return {
     opts = {
       -- Variants: "storm", "night", "moon", "day"
       style = "night",
-      transparent = true,
+      -- transparent = true,
     },
   },
   {
