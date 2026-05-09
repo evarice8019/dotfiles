@@ -48,11 +48,9 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-theme = Catppuccin Mocha
+theme = TokyoNight
 
-font-feature = -calt
-font-feature = -dlig
-font-feature = -liga
+font-family = "JetBrains Mono NL"
 
 keybind = ctrl+shift+e=new_split:right
 keybind = ctrl+shift+o=new_split:down
