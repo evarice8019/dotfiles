@@ -51,6 +51,7 @@
 theme = TokyoNight
 
 font-family = "JetBrains Mono NL"
+font-size = 11
 
 keybind = ctrl+shift+e=new_split:right
 keybind = ctrl+shift+o=new_split:down
