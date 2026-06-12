@@ -4,6 +4,7 @@ local config = wezterm.config_builder()
 
 -- config.color_scheme = "Catppuccin Mocha" -- or macchiato, frappe, latte
 config.color_scheme = "Tokyo Night" -- or macchiato, frappe, latte
+-- config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
 
 wezterm.on("update-right-status", function(window, pane)
 	local workspace = window:active_workspace()
@@ -25,20 +26,30 @@ config.keys = {
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
 	},
-	-- Optional: Horizontal split (top-to-bottom) often paired with 'o'
+	-- Horizontal split (top-to-bottom)
 	{
 		key = "o",
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
 	},
+	-- {
+	-- 	mods = "LEADER",
+	-- 	key = "=",
+	-- 	action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	-- },
+	-- {
+	-- 	mods = "LEADER",
+	-- 	key = "-",
+	-- 	action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+	-- },
 	{ key = "LeftArrow", mods = "ALT", action = wezterm.action.ActivatePaneDirection("Left") },
 	{ key = "RightArrow", mods = "ALT", action = wezterm.action.ActivatePaneDirection("Right") },
 	{ key = "UpArrow", mods = "ALT", action = wezterm.action.ActivatePaneDirection("Up") },
 	{ key = "DownArrow", mods = "ALT", action = wezterm.action.ActivatePaneDirection("Down") },
-	{ key = "h", mods = "ALT", action = wezterm.action.ActivatePaneDirection("Left") },
-	{ key = "l", mods = "ALT", action = wezterm.action.ActivatePaneDirection("Right") },
-	{ key = "k", mods = "ALT", action = wezterm.action.ActivatePaneDirection("Up") },
-	{ key = "j", mods = "ALT", action = wezterm.action.ActivatePaneDirection("Down") },
+	-- { key = "h", mods = "ALT", action = wezterm.action.ActivatePaneDirection("Left") },
+	-- { key = "l", mods = "ALT", action = wezterm.action.ActivatePaneDirection("Right") },
+	-- { key = "k", mods = "ALT", action = wezterm.action.ActivatePaneDirection("Up") },
+	-- { key = "j", mods = "ALT", action = wezterm.action.ActivatePaneDirection("Down") },
 }
 
 for i = 1, 9 do
