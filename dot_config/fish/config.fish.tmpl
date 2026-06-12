@@ -27,6 +27,10 @@ else
 
 end
 
+if command -q mise
+    mise activate | source
+end
+
 zoxide init fish | source
 fzf --fish | source
 
