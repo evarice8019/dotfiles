@@ -15,7 +15,6 @@ $character"""
 
 [directory]
 style = "blue"
-truncate_to_repo = false
 
 [character]
 success_symbol = "[❯](purple)"
