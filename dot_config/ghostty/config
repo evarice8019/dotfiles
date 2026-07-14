@@ -55,3 +55,6 @@ font-size = 11
 
 keybind = ctrl+shift+e=new_split:right
 keybind = ctrl+shift+o=new_split:down
+
+shell-integration-features = "ssh-env,ssh-terminfo"
+
