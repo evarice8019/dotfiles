@@ -1,0 +1,11 @@
+[tools]
+aws-vault = "latest"
+bat = "latest"
+cmake = "latest"
+fzf = "latest"
+glab = "latest"
+jj = "latest"
+lazygit = "latest"
+usage = "latest"
+yazi = "latest"
+zellij = "latest"
