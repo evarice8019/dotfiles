@@ -49,6 +49,7 @@
 # resize-overlay-duration = 4s 200ms
 
 theme = TokyoNight Moon
+custom-shader = ~/.config/ghostty/shaders/cursor_warp.glsl
 
 font-family = "JetBrainsMonoNL Nerd Font"
 font-size = 11
