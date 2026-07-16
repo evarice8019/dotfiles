@@ -1,5 +1,9 @@
 set _cachyos_cfg /usr/share/cachyos-fish-config/cachyos-config.fish
 
+if command -q mise
+    mise activate | source
+end
+
 if test -f $_cachyos_cfg
     # CachyOS: let the distro config handle starship, aliases, etc.
     source $_cachyos_cfg
@@ -27,13 +31,12 @@ else
 
 end
 
-if command -q mise
-    mise activate | source
-end
-
 zoxide init fish | source
 fzf --fish | source
 
 function fish_greeting
-    fortune | pokesay
+    if command -q fortune; and command -q pokesay
+        fortune | pokesay
+    end
 end
+
