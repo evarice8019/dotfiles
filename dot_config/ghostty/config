@@ -59,3 +59,5 @@ keybind = ctrl+shift+o=new_split:down
 
 shell-integration-features = "ssh-env,ssh-terminfo"
 
+notify-on-command-finish = unfocused
+notify-on-command-finish-after = 10s
