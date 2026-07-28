@@ -3,6 +3,7 @@ aws-cli = { version = "latest", symlink_bins = "true" }
 aws-vault = "latest"
 bat = "latest"
 bazelisk = "latest"
+bottom = "latest"
 cmake = "latest"
 delta = "latest"
 eza = "latest"
