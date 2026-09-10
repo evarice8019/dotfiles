@@ -41,18 +41,21 @@ return {
   --     -- transparent_background = true,
   --   },
   -- },
-  -- {
-  --   "folke/tokyonight.nvim",
-  --   opts = {
-  --     -- Variants: "storm", "night", "moon", "day"
-  --     style = "moon",
-  --     -- transparent = true,
-  --   },
-  -- },
   {
-    "LazyVim/LazyVim",
+    "folke/tokyonight.nvim",
     opts = {
-      colorscheme = "tokyonight-moon",
+      -- Variants: "storm", "night", "moon", "day"
+      style = "moon",
+      -- transparent = true,
+      on_highlights = function(hl, c)
+        hl.WinSeparator = { fg = c.blue0, bold = true }
+      end,
     },
   },
+  -- {
+  --   "LazyVim/LazyVim",
+  --   opts = {
+  --     colorscheme = "tokyonight-moon",
+  --   },
+  -- },
 }
