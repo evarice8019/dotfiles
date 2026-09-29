@@ -1,0 +1,8 @@
+onboarding = false
+
+[theme]
+name = "tokyo-night"
+auto_switch = false
+
+[keys]
+switch_tab = ["prefix+1..9", "alt+1..9"]
