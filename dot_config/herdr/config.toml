@@ -6,3 +6,6 @@ auto_switch = false
 
 [keys]
 switch_tab = ["prefix+1..9", "alt+1..9"]
+navigate_workspace_up = ["up", "k"]
+navigate_workspace_down = ["down", "j"]
+
