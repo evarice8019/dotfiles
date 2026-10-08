@@ -1,4 +1,8 @@
+[tool_alias]
+yazi = "github:sxyazi/yazi"
+
 [tools]
+"aqua:YS-L/csvlens" = "latest"
 aws-cli = { version = "latest", symlink_bins = "true" }
 aws-vault = "latest"
 bat = "latest"
@@ -20,6 +24,6 @@ starship = "latest"
 tokei = "latest"
 usage = "latest"
 uv = "latest"
-yazi = "latest"
+yazi = { version = "latest", matching = "musl" }
 zellij = "latest"
 zoxide = "latest"
